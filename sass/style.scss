@@ -1,0 +1,34 @@
+// Tarea Entregable N. 1 - GlowQueen SPA & Beauty
+
+// Página estatica a semejanza del fichero proporcionado.
+// El rusultado más paerecido al original se obtiene con una anchura pantalla de 1920px.
+
+
+@charset "UTF-8";
+
+@use 'abstracts';
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/footer';
+@use 'layout/header';
+@use 'layout/body';
+@use 'layout/main';
+
+// 4. Components
+@use 'components/button';
+@use 'components/listas';
+
+// 5. Pages
+@use 'pages/home';
+
+// 6. Themes
+@use 'themes/default';

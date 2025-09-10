@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@use 'sass:color';
+@use './variables';
+
+
+// Botones
+@mixin boton() {
+  padding: 16.5px min(2vw, 40px);
+  background-color: variables.$dark-blue;
+  color: variables.$white;
+  border-radius: 30px;
+  text-align: center;
+  &:hover {
+    background-color: color.adjust($color: variables.$dark-blue, $lightness: 20%);
+  }
+}
+
+//Reseteo de listas
+@mixin reset_list() {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  & li {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  & a {
+    text-decoration: none;
+    color: variables.$dark-blue;
+    &:hover {
+      color: variables.$cyan;
+    }
+    &.underlined {
+      text-decoration: underline;
+      &:hover {
+        color: variables.$white-bg;
+      }
+    }
+  }
+  & li.btn a {
+    color: variables.$white;
+  }
+  & li.icon:hover {
+    background-color: variables.$white-bg;
+    border-radius: 50%;
+  }
+}

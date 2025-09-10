@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts';
+
+footer {
+    width: 100vw;
+    height: 250px;
+    background-color: abstracts.$white;
+    margin-left: -10%;
+}

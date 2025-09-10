@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+// Font families
+$primary-font:"Poppins";
+$secondary-font:"Nunito Sans";
+
+// Font sizes
+$fs_title:64px;
+$fs_main_p:24px;
+$fs_par:18px;
+$fs_large:36px;
+
+// Font weights
+$fw_medium:500;
+$fw_bold:700;
+
+// Colors
+$dark-blue:#264065;
+$grey-text:#909090;
+$white:#FFFFFF;
+$semi-black:#070D15;
+$grey-bg:#FAF8F5;
+$cyan:#A9D6CB;
+$white-bg:#F5F5F5;
+
+//gradiente
+$bg-gradient:linear-gradient(to right, $grey-bg min(calc(0.669 * 1920px), 66.9vw), $cyan min(calc(0.669 * 1920px), 66.9vw));

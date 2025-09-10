@@ -1,0 +1,145 @@
+@use '../abstracts';
+
+.page_content {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    column-gap: 240px;
+    grid-template-columns: 65fr 35fr;
+    position: relative;
+    & main {
+        padding-right: min(10%, 85px);
+        padding-bottom: 232px;
+        position: relative;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: min(65%, 567px);
+            aspect-ratio: 1;
+            padding: 15% 10%;
+            background-image: url(../../img/Loto.svg);
+            background-repeat: no-repeat;
+            background-size: 83.33%;
+            background-position: center center;
+            position: absolute;
+            top: -162.5px;
+            left: min(52.5vw, 1008px); //Para asegurar que deje de desplazarse en pantallas superiores a 1920px
+            opacity: 5%;
+        }
+        & h1 {
+            margin: 0px;
+            margin-bottom: 32px;
+        }
+        & p.main_description {
+            font-size: 24px;
+            line-height: 40px;
+            color: abstracts.$grey-text;
+            margin: 0px 0px 56px 0px;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            gap: min(2vw, 32px);
+            & li.btn {
+               padding: 16.5px min(2.5vw, 46px); 
+            }
+            & li:last-child {
+                padding-left: 80px;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 48px;
+                    height: 48px;
+                    background-color: abstracts.$white;
+                    border-radius: 50%;
+                    background-position: center;
+                    position: absolute;
+                    left: 16px;
+                    background-image: url(../../img/Play.svg);
+                    background-repeat: no-repeat;
+                    background-size: 50%;
+                    background-position: center center;
+                    box-shadow: 5px 10px 10px rgba(abstracts.$grey-text,0.2);
+                }
+            }
+        }
+    }
+    & section.comments {
+        position: relative;
+        & article {
+            width: min(86%, 408px);
+            padding: 53px 24px 24px 24px;
+            background-color: rgba(abstracts.$white,0.5);
+            backdrop-filter: blur(4px);
+            border-radius: 15px;
+            position: absolute;
+            z-index: 2;
+            & cite {
+                color: abstracts.$semi-black;
+                font-style: normal;
+                line-height: abstracts.$fs_par;
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 32px;
+                    height: 21px;
+                    position: absolute;
+                    top: -29px;
+                    background-image: url(../../img/comillas.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            & p.author {
+                margin: 8px 0px 0px 0px;
+                font-weight: 800;
+            }
+            &:first-child {
+                top: calc(230px - (1920px - min(1920px, 100vw)) * 0.23);
+                right: calc(-5vw + (1920px - min(1920px, 100vw)) * 0.05); //-100px
+                //Para asegurar que deje de desplazarse en pantallas superiores a 1920px
+            }
+            &:last-child {
+                bottom: -28%;
+                left: min(1.6vw, 32px); //32px;
+            }
+        }
+    }
+    & section.statistic {
+        width: max(40%, 500px);
+        display: flex;
+        padding: 32px;
+        gap: 72px;
+        background-color: abstracts.$white;
+        border-radius: 15px;
+        text-align: center;
+        position: absolute;
+        bottom: -145px;
+        z-index: 2;
+        & article {
+            flex-basis: 33%;
+            flex-grow: 1;
+        }
+        & img.icon {
+            display: inline-block;
+            padding: 8px;
+            width: 72px;
+            height: 72px;
+            background-color: abstracts.$cyan;
+            border-radius: 50%;
+            margin-bottom: 24px;
+        }
+        & h2 {
+            margin: 0px;
+            font-size: abstracts.$fs_large;
+            font-weight: abstracts.$fw_medium;
+            margin-bottom: 16px;
+        }
+        & p.title {
+            margin: 0px;
+            color: abstracts.$grey-text;
+        }
+    }
+}

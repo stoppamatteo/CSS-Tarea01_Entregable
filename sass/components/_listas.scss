@@ -1,0 +1,5 @@
+@use '../abstracts';
+
+ul {
+    @include abstracts.reset_list();
+}

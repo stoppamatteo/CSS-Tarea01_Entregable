@@ -1,0 +1,21 @@
+@use '../abstracts';
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: abstracts.$primary-font, Verdana, sans-serif;
+  font-size: abstracts.$fs_par;
+  font-weight: abstracts.$fw_medium;
+  color: abstracts.$dark-blue;
+}
+
+.sec_font {
+  font-family: abstracts.$secondary-font, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1.main_title {
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 800;
+}
